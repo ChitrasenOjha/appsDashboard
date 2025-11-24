@@ -4,7 +4,9 @@
   xmlns="sap.m"
   displayBlock="true">
 
-  <Page id="EmployeesPage" title="Employees">
+  <Page id="EmployeesPage" title="Employees"
+    showNavButton="true"
+    navButtonPress=".onNavBack">
     <content>
       <VBox class="sapUiSmallMargin">
 
@@ -50,7 +52,7 @@
             <ColumnListItem>
               <cells>
                 <Text text="{EmployeeID}" />
-                <Text text="{FirstName} {LastName}" />
+                <Link text="{FirstName} {LastName}" press=".onEmployeePress"/>
                 <Text text="{Title}" />
                 <Text text="{City}" />
               </cells>

@@ -1,0 +1,87 @@
+<mvc:View
+  controllerName="project1.controller.EmployeeDetails"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+
+  <Page
+    title="Employee Details"
+    showNavButton="true"
+    navButtonPress=".onNavBack">
+
+    <content>
+
+      <!-- Header -->
+      <VBox alignItems="Center" class="sapUiSmallMargin">
+        <Title text="{FirstName} {LastName}" level="H1"/>
+        <Text text="{Title}"/>
+      </VBox>
+
+      <!-- Details Table -->
+      <Panel headerText="Employee Information">
+        <Table inset="true">
+
+          <columns>
+            <Column width="40%"><Text text="Field"/></Column>
+            <Column width="60%"><Text text="Value"/></Column>
+          </columns>
+
+          <items>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Employee ID"/>
+                <Text text="{EmployeeID}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="First Name"/>
+                <Text text="{FirstName}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Last Name"/>
+                <Text text="{LastName}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Title"/>
+                <Text text="{Title}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Title of Courtesy"/>
+                <Text text="{TitleOfCourtesy}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="City"/>
+                <Text text="{City}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Country"/>
+                <Text text="{Country}"/>
+              </cells>
+            </ColumnListItem>
+
+          </items>
+
+        </Table>
+      </Panel>
+
+    </content>
+  </Page>
+
+</mvc:View>

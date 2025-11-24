@@ -1,0 +1,108 @@
+<mvc:View
+  controllerName="project1.controller.SupplierDetails"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+
+  <Page
+    title="Supplier Details"
+    showNavButton="true"
+    navButtonPress=".onNavBack">
+
+    <content>
+
+      <!-- Supplier Header -->
+      <VBox class="sapUiSmallMargin" alignItems="Center">
+        <Title text="{CompanyName}" level="H1"/>
+        <Text text="{ContactName} ({ContactTitle})"/>
+      </VBox>
+
+      <!-- Supplier Table -->
+      <Panel headerText="Supplier Information">
+        <Table inset="true">
+
+          <columns>
+            <Column width="40%"><Text text="Field"/></Column>
+            <Column width="60%"><Text text="Value"/></Column>
+          </columns>
+
+          <items>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Supplier ID"/>
+                <Text text="{SupplierID}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Company Name"/>
+                <Text text="{CompanyName}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Contact Name"/>
+                <Text text="{ContactName}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Contact Title"/>
+                <Text text="{ContactTitle}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Address"/>
+                <Text text="{Address}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="City"/>
+                <Text text="{City}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Region"/>
+                <Text text="{Region}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Postal Code"/>
+                <Text text="{PostalCode}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Country"/>
+                <Text text="{Country}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Phone"/>
+                <Text text="{Phone}"/>
+              </cells>
+            </ColumnListItem>
+
+          </items>
+
+        </Table>
+      </Panel>
+
+    </content>
+  </Page>
+
+</mvc:View>

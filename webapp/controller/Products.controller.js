@@ -42,7 +42,34 @@ sap.ui.define([
       } else {
         oBinding.filter([]); // clear filter if search is empty
       }
-    }
+    },
+
+    onProductPress: function (oEvent) {
+      var productId = oEvent.getSource().getBindingContext().getProperty("ProductID");
+      this.getOwnerComponent().getRouter().navTo("ProductDetails", {
+        ProductID: productId
+      });
+    },
+
+    onCategoryPress: function (oEvent) {
+      var oContext = oEvent.getSource().getBindingContext();
+      var sCategoryID = oContext.getProperty("CategoryID");
+
+      this.getOwnerComponent().getRouter().navTo("CategoryDetails", {
+        CategoryID: sCategoryID
+      });
+    },
+    onSupplierPress: function (oEvent) {
+    var oBindingContext = oEvent.getSource().getBindingContext();
+    var sSupplierID = oBindingContext.getProperty("SupplierID");
+
+    // Navigate to supplier details page
+    var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+    oRouter.navTo("SupplierDetails", {
+        SupplierID: sSupplierID
+    });
+}
+
 
   });
 });

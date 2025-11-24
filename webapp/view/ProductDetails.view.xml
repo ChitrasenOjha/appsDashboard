@@ -1,0 +1,92 @@
+<mvc:View
+  controllerName="project1.controller.ProductDetails"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+
+  <Page
+    title="Product Details"
+    showNavButton="true"
+    navButtonPress=".onNavBack">
+
+    <content>
+
+      <!-- Centered Page Heading -->
+      <VBox class="sapUiSmallMargin" alignItems="Center">
+        <Title text="{ProductName}" level="H1"/>
+        <Text text="Detailed Product Information" class="sapUiSmallMarginBottom"/>
+      </VBox>
+
+      <!-- PRODUCT DETAILS TABLE ONLY -->
+      <Panel headerText="Product Details" expandable="false">
+        <Table inset="true">
+
+          <columns>
+            <Column width="40%"><Text text="Field"/></Column>
+            <Column width="60%"><Text text="Value"/></Column>
+          </columns>
+
+          <items>
+            <ColumnListItem>
+              <cells>
+                <Text text="Product ID"/>
+                <Text text="{ProductID}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Product Name"/>
+                <Text text="{ProductName}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Quantity Per Unit"/>
+                <Text text="{QuantityPerUnit}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Unit Price"/>
+                <Text text="{UnitPrice}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Units In Stock"/>
+                <Text text="{UnitsInStock}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Units On Order"/>
+                <Text text="{UnitsOnOrder}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Reorder Level"/>
+                <Text text="{ReorderLevel}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Discontinued"/>
+                <Text text="{Discontinued}"/>
+              </cells>
+            </ColumnListItem>
+
+          </items>
+
+        </Table>
+      </Panel>
+
+    </content>
+  </Page>
+</mvc:View>

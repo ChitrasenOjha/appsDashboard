@@ -1,0 +1,58 @@
+<mvc:View
+  controllerName="project1.controller.CategoryDetails"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+
+  <Page
+    title="Category Details"
+    showNavButton="true"
+    navButtonPress=".onNavBack">
+
+    <content>
+
+      <!-- Category Header -->
+      <VBox alignItems="Center" class="sapUiSmallMargin">
+        <Title text="{CategoryName}" level="H1"/>
+        <Text text="{Description}"/>
+      </VBox>
+
+      <!-- Category Table -->
+      <Panel headerText="Category Information">
+        <Table inset="true">
+          <columns>
+            <Column width="40%"><Text text="Field"/></Column>
+            <Column width="60%"><Text text="Value"/></Column>
+          </columns>
+
+          <items>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Category ID"/>
+                <Text text="{CategoryID}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Category Name"/>
+                <Text text="{CategoryName}"/>
+              </cells>
+            </ColumnListItem>
+
+            <ColumnListItem>
+              <cells>
+                <Text text="Description"/>
+                <Text text="{Description}"/>
+              </cells>
+            </ColumnListItem>
+
+          </items>
+
+        </Table>
+      </Panel>
+
+    </content>
+  </Page>
+
+</mvc:View>

@@ -41,7 +41,18 @@ sap.ui.define([
           oBinding.filter([]); // clear filter if empty
         }
       }
+    },
+    onEmployeePress: function (oEvent) {
+      var oItem = oEvent.getSource();
+      var oCtx = oItem.getBindingContext();
+
+      var sEmployeeID = oCtx.getProperty("EmployeeID");
+
+      this.getOwnerComponent()
+        .getRouter()
+        .navTo("EmployeeDetails", { employeeId: sEmployeeID });
     }
+
 
   });
 });

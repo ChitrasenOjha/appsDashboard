@@ -22,8 +22,10 @@
       <Table
         id="productsTable"
         items="{
-          path: '/Products'
-        }">
+        path: '/Products',
+        parameters: {
+        expand: 'Category, Supplier'  }
+      }">
         <headerToolbar>
           <Toolbar>
             <Title text="Product List"/>
@@ -34,16 +36,16 @@
           <Column><Text text="Product ID"/></Column>
           <Column><Text text="Name"/></Column>
           <Column><Text text="Category"/></Column>
-          <Column><Text text="Price"/></Column>
+          <Column><Text text="Supplier"/></Column>
         </columns>
 
         <items>
           <ColumnListItem>
             <cells>
               <Text text="{ProductID}"/>
-              <Text text="{ProductName}"/>
-              <Text text="{Category/CategoryName}"/>
-              <Text text="{UnitPrice}"/>
+              <Link text="{ProductName}" press=".onProductPress"/>
+              <Link text="{Category/CategoryName}" press=".onCategoryPress"/>
+              <Link text="{Supplier/CompanyName}" press=".onSupplierPress"/>
             </cells>
           </ColumnListItem>
         </items>
