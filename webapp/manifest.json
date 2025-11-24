@@ -1,0 +1,104 @@
+{
+  "_version": "1.76.0",
+  "$schema": "https://ui5.sap.com/schemas/manifest.schema.json",
+  "sap.app": {
+    "id": "project1",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "Custom App",
+    "description": "A simple SAP Fiori app showing Products and Employees from the Northwind OData service.",
+    "dataSources": {
+      "northwind": {
+        "uri": "V2/Northwind/Northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "supportedThemes": [
+      "sap_horizon"
+    ]
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "project1.view.App",
+      "type": "XML",
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.120.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "project1.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "northwind",
+        "settings": {
+          "useBatch": false
+        }
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "project1.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "Home",
+          "target": "Home"
+        },
+        {
+          "pattern": "Products",
+          "name": "Products",
+          "target": "Products"
+        },
+        {
+          "pattern": "Employees",
+          "name": "Employees",
+          "target": "Employees"
+        }
+      ],
+      "targets": {
+        "Home": {
+          "viewName": "Home",
+          "viewId": "Home"
+        },
+        "Products": {
+          "viewName": "Products",
+          "viewId": "Products"
+        },
+        "Employees": {
+          "viewName": "Employees",
+          "viewId": "Employees"
+        }
+      }
+    }
+  }
+}

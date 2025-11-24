@@ -1,0 +1,53 @@
+<mvc:View
+  controllerName="project1.controller.Products"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+
+  <Page
+    id="productsPage"
+    title="Products"
+    showNavButton="true"
+    navButtonPress=".onNavBack">
+    <subHeader>
+      <Toolbar>
+        <SearchField
+          id="productSearch"
+          width="50%"
+          placeholder="Search Products..."
+          liveChange=".onSearch"/>
+      </Toolbar>
+    </subHeader>
+
+    <content>
+      <Table
+        id="productsTable"
+        items="{
+          path: '/Products'
+        }">
+        <headerToolbar>
+          <Toolbar>
+            <Title text="Product List"/>
+          </Toolbar>
+        </headerToolbar>
+
+        <columns>
+          <Column><Text text="Product ID"/></Column>
+          <Column><Text text="Name"/></Column>
+          <Column><Text text="Category"/></Column>
+          <Column><Text text="Price"/></Column>
+        </columns>
+
+        <items>
+          <ColumnListItem>
+            <cells>
+              <Text text="{ProductID}"/>
+              <Text text="{ProductName}"/>
+              <Text text="{Category/CategoryName}"/>
+              <Text text="{UnitPrice}"/>
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+    </content>
+  </Page>
+</mvc:View>

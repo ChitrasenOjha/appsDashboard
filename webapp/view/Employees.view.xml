@@ -1,0 +1,64 @@
+<mvc:View
+  controllerName="project1.controller.Employees"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  displayBlock="true">
+
+  <Page id="EmployeesPage" title="Employees">
+    <content>
+      <VBox class="sapUiSmallMargin">
+
+        <!-- Search Field -->
+        <SearchField
+          id="employeeSearch"
+          width="50%"
+          liveChange="onSearch"
+          placeholder="Search employees by name..." />
+
+        <!-- Table -->
+        <Table
+          id="EmployeesTable"
+          inset="false"
+          growing="true"
+          growingScrollToLoad="true"
+          items="{
+            path: '/Employees'
+          }">
+
+          <headerToolbar>
+            <Toolbar id="employeeToolbar">
+              <Title text="Employee List" level="H2" />
+            </Toolbar>
+          </headerToolbar>
+
+          <columns>
+            <Column id="colId">
+              <Text text="ID" />
+            </Column>
+            <Column id="colName">
+              <Text text="Name" />
+            </Column>
+            <Column id="colTitle">
+              <Text text="Title" />
+            </Column>
+            <Column id="colCity">
+              <Text text="City" />
+            </Column>
+          </columns>
+
+          <items>
+            <ColumnListItem>
+              <cells>
+                <Text text="{EmployeeID}" />
+                <Text text="{FirstName} {LastName}" />
+                <Text text="{Title}" />
+                <Text text="{City}" />
+              </cells>
+            </ColumnListItem>
+          </items>
+        </Table>
+
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

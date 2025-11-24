@@ -1,0 +1,40 @@
+<mvc:View
+  controllerName="project1.controller.Home"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+
+  <Page
+    id="homePage"
+    title="Apps Dashboard"
+    titleAlignment="Center">
+    <content>
+      <VBox class="sapUiSmallMargin">
+        <Title text="Select a Category" level="H2" class="sapUiSmallMarginBottom"/>
+
+        <FlexBox justifyContent="Center" wrap="Wrap">
+          <GenericTile
+            id="productsTile"
+            header="Products"
+            subheader="View all products"
+            press=".onProductsPress"
+            class="sapUiTinyMargin">
+            <TileContent>
+              <ImageContent src="sap-icon://product"/>
+            </TileContent>
+          </GenericTile>
+
+          <GenericTile
+            id="employeesTile"
+            header="Employees"
+            subheader="View all employees"
+            press=".onEmployeesPress"
+            class="sapUiTinyMargin">
+            <TileContent>
+              <ImageContent src="sap-icon://employee"/>
+            </TileContent>
+          </GenericTile>
+        </FlexBox>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>
