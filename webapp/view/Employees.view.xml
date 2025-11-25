@@ -49,10 +49,12 @@
           </columns>
 
           <items>
-            <ColumnListItem>
+            <ColumnListItem
+            type="Navigation"
+            press=".onEmployeePress">
               <cells>
                 <Text text="{EmployeeID}" />
-                <Link text="{FirstName} {LastName}" press=".onEmployeePress"/>
+                <Text text="{FirstName} {LastName}" />
                 <Text text="{Title}" />
                 <Text text="{City}" />
               </cells>

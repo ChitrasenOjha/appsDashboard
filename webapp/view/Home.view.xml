@@ -33,6 +33,17 @@
               <ImageContent src="sap-icon://employee"/>
             </TileContent>
           </GenericTile>
+        <!-- Suppliers Tile -->
+          <GenericTile
+            id="suppliersTile"
+            header="Suppliers"
+            subheader="View all suppliers"
+            press=".onSuppliersPress"
+            class="sapUiTinyMargin">
+            <TileContent>
+              <ImageContent src="sap-icon://factory"/>
+            </TileContent>
+          </GenericTile>
         </FlexBox>
       </VBox>
     </content>

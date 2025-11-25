@@ -1,0 +1,58 @@
+<mvc:View
+  controllerName="project1.controller.Suppliers"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  displayBlock="true">
+
+  <Page id="SuppliersPage" title="Suppliers"
+    showNavButton="true"
+    navButtonPress=".onNavBack">
+    <content>
+      <VBox class="sapUiSmallMargin">
+
+        <!-- Search Field -->
+        <SearchField
+          id="supplierSearch"
+          width="50%"
+          liveChange="onSearch"
+          placeholder="Search suppliers..." />
+
+        <!-- Table -->
+        <Table
+          id="SuppliersTable"
+          inset="false"
+          growing="true"
+          growingScrollToLoad="true"
+          items="{ path: '/Suppliers' }">
+
+          <headerToolbar>
+            <Toolbar id="supplierToolbar">
+              <Title text="Suppliers List" level="H2" />
+            </Toolbar>
+          </headerToolbar>
+
+          <columns>
+            <Column id="supColId"><Text text="Supplier ID" /></Column>
+            <Column id="supColCompany"><Text text="Company Name" /></Column>
+            <Column id="supColContact"><Text text="Contact Person" /></Column>
+            <Column id="supColCity"><Text text="City" /></Column>
+          </columns>
+
+          <items>
+            <ColumnListItem id="supListItem">
+              <cells>
+                <Text text="{SupplierID}" />
+                <Text text="{CompanyName}" />
+                <Text text="{ContactName}" />
+                <Text text="{City}" />
+              </cells>
+            </ColumnListItem>
+          </items>
+
+        </Table>
+
+      </VBox>
+    </content>
+
+  </Page>
+</mvc:View>

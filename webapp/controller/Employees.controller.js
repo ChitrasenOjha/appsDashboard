@@ -48,6 +48,9 @@ sap.ui.define([
 
       var sEmployeeID = oCtx.getProperty("EmployeeID");
 
+        var oTable = this.byId("EmployeesTable");
+        oTable.removeSelections();
+
       this.getOwnerComponent()
         .getRouter()
         .navTo("EmployeeDetails", { employeeId: sEmployeeID });

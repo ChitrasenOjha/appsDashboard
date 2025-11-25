@@ -103,6 +103,11 @@
           "pattern": "EmployeeDetails/{employeeId}",
           "name": "EmployeeDetails",
           "target": "EmployeeDetails"
+        },
+        {
+          "pattern": "Suppliers",
+          "name": "Suppliers",
+          "target": "Suppliers"
         }
       ],
       "targets": {
@@ -135,6 +140,11 @@
           "viewName": "EmployeeDetails",
           "viewId": "EmployeeDetails",
           "viewLevel": 3
+        },
+        "Suppliers": {
+          "viewName": "Suppliers",
+          "viewPath": "project1.view",
+          "viewType": "XML"
         }
       }
     }

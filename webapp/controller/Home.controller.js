@@ -10,6 +10,11 @@ sap.ui.define([
 
     onEmployeesPress: function () {
       this.getOwnerComponent().getRouter().navTo("Employees");
+    },
+
+    onSuppliersPress: function () {
+      this.getOwnerComponent().getRouter().navTo("Suppliers");
     }
+
   });
 });
